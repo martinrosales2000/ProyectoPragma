@@ -1,0 +1,139 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>INVENTARIO</title>
+    <script src="https://kit.fontawesome.com/422c276ca1.js" crossorigin="anonymous"></script>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar">
+        <h2 style="display:inline-block; margin-left:0.5rem;">INVENTARIO</h2>
+        <img src="~/img/logo.png" width="50px" height="50px" style="border-radius: 10rem; display: inline-block; float:right; margin-right:0.5rem; margin-top:0.5rem;">
+    </div>
+    <div class="area"></div>
+    <nav class="main-menu">
+        <ul class="User" style="padding-bottom: 2rem;">
+            <a>
+                <h4>User:</h4>
+                <span class="nav-text">
+                    <h5>Juan</h5>
+                </span>
+            </a>
+        </ul>
+        <ul>
+            <li>
+                <a href="~/Views/Home/Inventario.cshtml">
+
+                    <i class="fa fa-book fa-2x"> </i>
+                    <span class="nav-text">
+                        <h4>Inventario</h4>
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="~/Views/Home/Ingresar_Ventas.cshtml">
+                    <i class="fa fa-shopping-bag fa-2x"> </i>
+                    <span class="nav-text">
+                        <h4>Ingresar venta</h4>
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="~/Views/Home/Historial_Ventas.cshtml">
+                    <i class="fa fa-receipt fa-2x"></i>
+                    <span class="nav-text">
+                        <h4>Historial de venta</h4>
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="~/Views/Home/Lote.cshtml">
+                    <i class="fa fa-box fa-2x"></i>
+                    <span class="nav-text">
+                        <h4>Lote</h4>
+                    </span>
+                </a>
+
+            </li>
+
+        </ul>
+
+        <ul class="logout">
+            <li>
+                <a href="~/Views/Home/Index.cshtml">
+                    <i class="fa fa-power-off fa-2x"></i>
+                    <span class="nav-text">
+                        <h4>Cerrar sesión</h4>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <nav class="navbarF">
+        <div class="grupoBTN">
+
+            <a href="" id="b">
+                <button type="button" class="btn btn-success" id="botones">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                    </svg>
+                    Buscar
+                </button>
+            </a>
+
+            <a href="" id="b">
+                <button type="button" class="btn btn-success" id="botones">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+                    </svg>
+                    Agregar
+                </button>
+            </a>
+
+            <a href="" id="b">
+                <button type="button" class="btn btn-success" id="botones">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                        <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"></path>
+                    </svg>
+                    Modificar
+                </button>
+            </a>
+
+            <a href="" id="b">
+                <button type="button" class="btn btn-success" id="botones2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-check" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"></path>
+                        <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"></path>
+                        <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"></path>
+                    </svg>
+                    Guardar
+                </button>
+            </a>
+
+            <a href="" id="b">
+                <button type="button" class="btn btn-success" id="botones2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"></path>
+                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"></path>
+                    </svg>
+                    Eliminar
+                </button>
+            </a>
+
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
